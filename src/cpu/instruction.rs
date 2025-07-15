@@ -16,6 +16,20 @@ pub enum Instruction {
     Cpl,
     Ccf,
     Scf,
+    Rlca,
+    Rla,
+    Rrca,
+    Rra,
+    Rlc(ArithmeticTarget),
+    Rl(ArithmeticTarget),
+    Rrc(ArithmeticTarget),
+    Rr(ArithmeticTarget),
+    Sla(ArithmeticTarget),
+    Sra(ArithmeticTarget),
+    Srl(ArithmeticTarget),
+    Bit((u8, ArithmeticTarget)),
+    Set((u8, ArithmeticTarget)),
+    Res((u8, ArithmeticTarget)),
 }
 
 pub enum ArithmeticTarget {
